@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de prueba</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        /* Estilos para las imágenes */
+      .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0 auto;
+            width: 80%;
+        }
+
+       .image-item {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 10px;
+            overflow: hidden;
+        }
+
+       .image-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+
+       .image-item:hover img {
+            filter: brightness(50%);
+        }
+
+       .image-item:hover.image-text {
+            opacity: 1;
+        }
+
+       .image-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        /* Estilos para la paginación */
+      .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+       .page-item {
+            margin: 0 5px;
+        }
+
+       .page-link {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            font-size: 20px;
+            color: #333;
+            border: none;
+            background-color: transparent;
+            transition: all 0.3s ease;
+        }
+
+       .page-link:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+            color: #333;
+        }
+
+       .page-item.active .page-link {
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+              <img src="Images/logo.jpeg" alt="Logo" width="150" height="100">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Pagina Principal <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Pagina 2</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Pagina 3</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contacto</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+    </header>
+    <main>
+        <div class="image-container" id="image-container">
+            <!-- Se cargarán las imágenes de forma estática -->
+            <div class="image-item">
+                <img src="Images/foto1.jpg" alt="Image 1">
+                <div class="image-text">Foto 1</div>
+            </div>
+            <div class="image-item">
+                <img src="Images/foto2.jpg" alt="Image 2">
+                <div class="image-text">Foto 2</div>
+            </div>
+            <div class="image-item">
+                <img src="Images/foto3.jpg" alt="Image 3">
+                <div class="image-text">Foto 3</div>
+            </div>
+            <div class="image-item">
+                <img src="Images/foto4.jpg" alt="Image 4">
+                <div class="image-text">Foto 4</div>
+            </div>
+            <div class="image-item">
+                <img src="Images/foto5.jpg" alt="Image 5">
+                <div class="image-text">Foto 5</div>
+            </div>
+            <div class="image-item">
+                <img src="Images/foto6.jpg" alt="Image 6">
+                <div class="image-text">Foto 6</div>
+            </div>
+            <div class="image-item">
+                <img src="Images/foto7.jpg" alt="Image 7">
+                <div class="image-text">Foto 7</div>
+            </div>
+            <div class="image-item">
+                <img src="Images/foto8.jpg" alt="Image 8">
+                <div class="image-text">Foto 8</div>
+            </div>
+            <div class="image-item">
+                <img src="Images/foto9.jpg" alt="Image 9">
+                <div class="image-text">Foto 9</div>
+            </div>
+            <div class="image-item">
+                <img src="Images/foto10.jpg" alt="Image 10">
+                <div class="image-text">Foto 10</div>
+            </div>
+            <div class="image-item">
+                <img src="Images/foto11.jpg" alt="Image 11">
+                <div class="image-text">Foto 11</div>
+            </div>
+            <div class="image-item">
+                <img src="Images/foto12.jpg" alt="Image 12">
+                <div class="image-text">Foto 12</div>
+            </div>
+            <div class="image-item">
+                <img src="Images/foto13.jpg" alt="Image 13">
+                <div class="image-text">Foto 13</div>
+            </div>
+            <div class="image-item">
+                <img src="Images/foto14.jpg" alt="Image 14">
+                <div class="image-text">Foto 14</div>
+            </div>
+            <div class="image-item">
+                <img src="Images/foto15.jpg" alt="Image 15">
+                <div class="image-text">Foto 15</div>
+            </div>
+            <div class="image-item">
+                <img src="Images/foto16.jpg" alt="Image 16">
+                <div class="image-text">Foto 16</div>
+            </div>
+            <div class="image-item">
+                <img src="Images/foto17.jpg" alt="Image 17">
+                <div class="image-text">Foto 17</div>
+            </div>
+            <div class="image-item">
+                <img src="Images/foto18.jpg" alt="Image 18">
+                <div class="image-text">Foto 18</div>
+            </div>
+            <div class="image-item">
+                <img src="Images/foto19.jpg" alt="Image 19">
+                <div class="image-text">Foto 19</div>
+            </div>
+            <div class="image-item">
+                <img src="Images/foto20.jpg" alt="Image 20">
+                <div class="image-text">Foto 20</div>
+            </div>
+            <div class="image-item">
+                <img src="Images/foto21.jpg" alt="Image 21">
+                <div class="image-text">Foto 21</div>
+            </div>
+            <div class="image-item">
+                <img src="Images/foto22.jpg" alt="Image 22">
+                <div class="image-text">Foto 22</div>
+            </div>
+            <div class="image-item">
+                <img src="Images/foto23.jpg" alt="Image 23">
+                <div class="image-text">Foto 23</div>
+            </div>
+            <div class="image-item">
+                <img src="Images/foto24.jpg" alt="Image 24">
+                <div class="image-text">Foto 24</div>
+            </div>
+        </div>
+        <div class="pagination">
+            <div class="page-item">
+                <a class="page-link" href="#" data-page="1">1</a>
+            </div>
+            <div class="page-item">
+                <a class="page-link" href="#" data-page="2">2</a>
+            </div>
+            <div class="page-item">
+                <a class="page-link" href="#" data-page="3">3</a>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <ul>
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 text-right">
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="whatsapp-icon">
+        <a href="https://api.whatsapp.com/send?phone=+543496464488&text=HOLAAAA!" target="_blank">
+          <img src="Images/pngegg.png" alt="WhatsApp" width="100" height="100">
+        </a>
+      </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script>
+        // Función para cambiar de página
+        function changePage(page) {
+            const currentPage = document.querySelector(".pagination .page-item.active.page-link");
+            currentPage.parentElement.previousElementSibling.querySelector(".page-link").classList.remove("active");
+            currentPage.parentElement.classList.remove("active");
+            currentPage.parentElement.nextElementSibling.querySelector(".page-link").classList.remove("active");
+            currentPage.classList.remove("active");
+            currentPage.textContent = page;
+            currentPage.classList.add("active");
+            currentPage.parentElement.previousElementSibling.querySelector(".page-link").textContent = parseInt(page) - 1;
+            currentPage.parentElement.nextElementSibling.querySelector(".page-link").textContent = parseInt(page) + 1;
+
+            // Mostrar las imágenes correspondientes a la página seleccionada
+            const imageItems = document.querySelectorAll(".image-container .image-item");
+            imageItems.forEach(function(imageItem, index) {
+                if (index >= (page - 1) * 10 && index < page * 10) {
+                    imageItem.style.display = "block";
+                } else {
+                    imageItem.style.display = "none";
+                }
+            });
+        }
+
+        // Inicializar la página actual en 1
+        changePage(1);
+
+        // Agregar eventos a los botones de página
+        const pageLinks = document.querySelectorAll(".pagination .page-link");
+        pageLinks.forEach(function(pageLink) {
+            pageLink.addEventListener("click", function(event) {
+                event.preventDefault();
+                changePage(pageLink.textContent);
+            });
+        });
+    </script>
+</body>
+</html>

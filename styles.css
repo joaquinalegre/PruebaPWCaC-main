@@ -1,0 +1,48 @@
+.bg-gray {
+    background-color: #808080;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: url("Images/flecha.png");
+  background-size: 100% 100%;
+  width: 30px;
+  height: 30px;
+}
+
+.carousel-item {
+  width: 500px;
+  transition: width 2ms;
+}
+
+.carousel-item:hover {
+  width: 600px;
+  
+}
+
+.carousel-control-next-icon {
+  transform: rotate(180deg);
+}
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+.whatsapp-icon a:hover {
+    animation: jump 1s ease-in-out;
+  }
+  
+  @keyframes jump {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+.whatsapp-icon img {
+    border-radius: 50%;
+}
