@@ -252,28 +252,31 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script>
-        // Función para cambiar de página
-        function changePage(page) {
-            const currentPage = document.querySelector(".pagination .page-item.active.page-link");
-            currentPage.parentElement.previousElementSibling.querySelector(".page-link").classList.remove("active");
-            currentPage.parentElement.classList.remove("active");
-            currentPage.parentElement.nextElementSibling.querySelector(".page-link").classList.remove("active");
-            currentPage.classList.remove("active");
-            currentPage.textContent = page;
-            currentPage.classList.add("active");
-            currentPage.parentElement.previousElementSibling.querySelector(".page-link").textContent = parseInt(page) - 1;
-            currentPage.parentElement.nextElementSibling.querySelector(".page-link").textContent = parseInt(page) + 1;
+       function changePage(page) {
+  const currentPage = document.querySelector(".pagination .page-item.active.page-link");
+  currentPage.parentElement.classList.remove("active");
+  const targetPageLink = document.querySelector(`.pagination .page-link[data-page="${page}"]`);
+  targetPageLink.parentElement.classList.add("active");
 
-            // Mostrar las imágenes correspondientes a la página seleccionada
-            const imageItems = document.querySelectorAll(".image-container .image-item");
-            imageItems.forEach(function(imageItem, index) {
-                if (index >= (page - 1) * 10 && index < page * 10) {
-                    imageItem.style.display = "block";
-                } else {
-                    imageItem.style.display = "none";
-                }
-            });
-        }
+  // Mostrar las imágenes correspondientes a la página seleccionada
+  const imageItems = document.querySelectorAll(".image-container .image-item");
+  const startIndex = (page - 1) * 10;
+  const endIndex = page * 10;
+  imageItems.forEach(function(imageItem, index) {
+    if (index >= startIndex && index < endIndex) {
+      imageItem.style.display = "block";
+    } else {
+      imageItem.style.display = "none";
+    }
+  });
+}
+
+document.querySelector(".pagination").addEventListener("click", function(event) {
+  if (event.target.classList.contains("page-link")) {
+    const page = event.target.textContent;
+    changePage(page);
+  }
+});
 
         // Inicializar la página actual en 1
         changePage(1);
